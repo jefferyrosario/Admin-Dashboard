@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+        "left-panel-container top-container"
+        "left-panel-container main-container";
+    min-height: 100%;
+}
+
+
+.left-panel-container {
+    padding: 1rem;
+    grid-area: left-panel-container;
+    background-color: #60a5fa;
+    display: grid;
+    grid-template-rows: 40px 30px 30px 30px 30px 30px 50px 30px 30px 30px; 
+    min-width: 200px;
+}
+
+.main-container {
+    padding: 1rem;
+    grid-column: 2;
+    grid-row: 2;
+    background-color: aliceblue;
+}
+
+#dashboard {
+    object-fit: contain;
+}
+
+.left-panel-container > div {
+    display: flex;
+    width: 2rem;
+    color: white;
+    text-decoration: none;
+    gap: 15px;
+    padding-left: 15px;
+    font-size: 1.2rem;
+}
+
+.left-panel-container > div > a {
+    color: white;
+    text-decoration: none;
+}
+
+.left-panel-container > div > a:hover {
+    color: pink;
+    text-decoration: none;
+}
+
+.left-panel-container > div > img {
+    height: 1.2rem;
+}
+
+img {
+    height: 1.2rem;
+}
+
+.top-container {
+    display: grid;
+    padding: 1rem;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "svg searchbar svg image name"
+    "biggerimage lines buttons buttons buttons";
+    box-shadow: 3px 3px 2px lightgray;
+    
+}
+
+.top-container > div {
+    display: flex;
+    gap: 50px;
+    
+}
+
+.top-container > div:first-child > div:first-child {
+    display: flex;
+    flex: 1;
+    align-items: start;
+    gap: 10px;
+}
+
+.top-container > div:first-child > div:first-child > input {
+    flex: 1;
+    border-radius: 10px;
+    border: none;
+    background-color: lightgrey;
+    height: 1.2rem;
+}
+
+.top-container > div:first-child > div:nth-child(2) {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.user-info > div {
+    align-self: flex-start;
+    font-weight: 900;
+}
+
+#first-shih-tzu {
+    border-radius: 50px;
+    width: 40px;
+    height: auto;
+}
+
+#second-shih-tzu {
+    height: 4rem;
+    border-radius: 50px;
+}
+
+.user-profile {
+    display: flex;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex:1;
+    gap:15px;
+}
+
+.user-name > div:first-child {
+    font-size: small;
+}
+
+.user-name > div:first-child, .user-name > div:nth-child(2){
+    font-weight: 800;
+}
+
+.user-name > div:nth-child(2){
+    font-size:large;
+    font-weight: 900;
+}
+
+
+
+.button-container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.button-container > button {
+    border: none;
+    border-radius: 25px;
+    height: 2rem;
+    width: 5rem;
+    background-color: #60a5fa;
+    color: white;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+ /*   grid-template-rows: .1fr 2fr 3fr; */
+  /*  grid-template-rows: 1fr 1fr 1fr / 1fr 1fr 1fr; */
+    grid-template-rows: 1fr 1fr 2fr ;
+    grid-template-areas: 
+    "super-cool-project impossible-app  announcement-container"
+    "parking-app hookah-app announcement-container"
+    "dating-app random-app trending-container"
+    ". .trending-container" ;
+}
+
+
+
+
+#project-header {
+    grid-area: project-header;
+    padding: 1rem;
+}
+
+#super-cool-project {
+    grid-area: super-cool-project;
+    grid-row: span 1;
+}
+
+#impossible-app {
+    grid-area: impossible-app;
+}
+
+#parking-app {
+    grid-area: parking-app;
+}
+
+#hookah-app {
+    grid-area: hookah-app;
+}
+
+#dating-app {
+    grid-area: dating-app;
+}
+
+#random-app {
+    grid-area: random-app;
+}
+
+#announcement-container {
+    grid-area: announcement-container;
+}
+
+
+
+
+#announcements {
+    padding: 1rem;
+    background-color: white;
+    border-radius: 5px;
+    margin: 1rem;
+    box-shadow: 3px 3px 2px lightgray;
+    
+}
+
+
+.announcement-border {
+    border-bottom: solid 1px lightgrey;
+    margin: 1rem 0;
+}
+
+p {
+    color: grey;
+}
+
+.project > p {
+    color: grey;
+    font-weight: 100;
+    flex-grow: 1;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    border: 1px none grey;
+    box-shadow: 3px 3px 2px lightgray, inset .3rem 0 0 0 #FEBE10 ; 
+    border-radius: 5px;
+    background-color: white;
+    padding: 1.4rem;
+    margin: 1rem;
+    flex-grow: 3;
+
+}
+
+.project-container {
+    display: flex;
+    align-self: flex-end;
+    gap: 1rem;
+}
+
+#trending-container {
+    grid-area: trending-container;
+   grid-row: span 2;
+    
+}
+
+#trending {
+    background-color: white;
+    box-shadow: 3px 3px 2px lightgray;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 5px;
+}
+
+#trending-header {
+    grid-area: 3 / 3 / 4 / 4;
+    grid-row: 25px;
+    padding:1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
